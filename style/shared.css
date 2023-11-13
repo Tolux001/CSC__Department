@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts Declaration */
+@font-face {
+    font-family: "Overpass";
+    src: url(../asset/Overpass-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../asset/Poppins-Bold.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url(../asset/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-display: swap;
+}
+.tier--one {
+    display: none;
+}
+.tier--two {
+    margin-top: 1em;
+}
+.card--component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.card--component__text {
+    display: flex;
+    flex-flow: column wrap;
+}
+p[class="cct"] {
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icon {
+    padding: 10px 15px;
+}
+.icon > p {
+    font-size: 1em;
+    color: #f5f5f5;
+    font-family: "Fraunces", sans-serif;
+}
+@media (min-width:768px) {
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .tier--one {
+        position: fixed;
+        flex: 40%;
+        display: block;
+        padding: 8em 40px 20px 20px;
+        background-color: rgb(207, 222, 238);
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .tier--one__btn {
+        background-color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 1em;
+        margin-bottom: 30px;
+    }
+    .tier--one > p{
+        padding-bottom: 15px;
+    }
+    .tier--one > p > i {
+        margin-right: 10px;
+    }
+    span[class="space"] {
+        padding: 20px 0;
+        border: 1px solid rgb(207, 222, 238);
+    }
+    .tier--two {
+        position: relative;
+        flex: 60%;
+    }
+    .card--component {
+        justify-content: center;
+    }
+    .card--component__text {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .card--component__text > p {
+        margin: 0 100px;
+    }
+    .card--component {
+        padding: 10px 0;
+        border-top: 2px solid  rgb(207, 222, 238);
+    }
+}

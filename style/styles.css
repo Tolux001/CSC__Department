@@ -1,0 +1,472 @@
+/*Reset*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Variable Declaration */
+:root{
+    /* colors */
+
+    /* Primary */
+    --Blue: hsl(212, 86%, 64%);
+    --Cyan: hsl(189, 79%, 60%);
+    --Orange: hsl(34, 97%, 64%);
+    --Red: hsl(0, 78%, 62%);
+    --lightRed: hsla(0, 100%, 67%, 0.4);
+    --orangeYellow: hsla(34, 97%, 60%, 0.4);
+    --greenTeal: hsla(189, 79%, 60%, 0.4);
+    --cobaltBlue: hsla(212, 86%, 64%, 0.4);
+    --skyGreen: hsl(110, 90%, 36%);
+    --darkGreen: hsl(120, 100%, 25%); 
+    --darkCyan: hsl(175, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --netlifyBrokenPage: rgb(14, 30, 37);
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --veryLightGray: hsl(0, 0%, 98%);
+}
+
+/* Fonts Declaration */
+@font-face {
+    font-family: "Lexend Deca";
+    src: url(../asset/LexendDeca-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Big Shoulders Display";
+    src: url(../asset/BigShouldersDisplay-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url(../asset/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Overpass";
+    src: url(../asset/Overpass-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../asset/Poppins-Bold.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat-Italic";
+    src: url(../asset/Montserrat-Italic-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Outfit";
+    src: url(../asset/Outfit-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Red_Hat_Display";
+    src: url(../asset/RedHatDisplay-VariableFont_wght.ttf);
+    font-display: swap;
+}
+
+/* General styling*/
+header.header {
+    background-color: var(--White);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    box-shadow: 0 1px 10px var(--veryDarkBlue);
+}
+.header--link em {
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Fraunces";
+    color: var(--grayishBlue);
+}
+.header--link img{
+    height: 50px;
+    width: 50px;
+}
+.nav--bar,
+input[name="check"],
+.cancel--btn {
+    display: none;
+}
+.hamburger {
+    color: var(--Black);
+    font-size: 30px;
+    display: block;
+    user-select: auto;
+}
+.circle-mark {
+    color: var(--Black);
+    font-size: 30px;
+}
+@media (max-width: 795px) {
+    .nav--bar {
+        position: absolute;
+        z-index: 3;
+        background-color: var(--veryDarkCyan);
+        right: 0;
+        left: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 450px;
+        padding: 100px 0;
+    }
+    .nav--bar li {   
+        display: block;
+    }
+    .nav--bar li > a {
+        color: var(--veryLightGray);
+        font-family: "Poppins";
+    }
+    .nav--bar li > a:hover {
+        padding-left: 7px;
+        border: none;
+        border-left: 8px solid var(--White);
+        transition: 0.2s ease-out;
+    }
+    .nav--bar li + li {
+        margin-top: 50px;
+    }
+    input[type="checkbox"]:checked ~ .nav--bar {
+        display: block;
+        transition: 5s all;
+    }
+}
+a {
+    text-decoration: none;
+}
+i, button, a {
+    cursor: pointer;
+}
+@media (min-width: 800px) {
+    .hamburger,
+    .circle-mark {
+        display: none; 
+    }
+    .nav--bar {display: block;}
+    .nav--bar li{
+        display: inline-block;
+        list-style: none;
+        cursor: pointer;
+        margin-left: 1em;
+    }
+    .nav--bar li > a {
+        color: var(--darkGreen);
+        font-size: 1.7em;
+        font-weight: 500;
+        font-family: "Outfit", serif;
+    }
+    .nav--bar li > a:hover {
+        padding-left: 7px;
+        border: none;
+        border-left: 5px solid var(--skyGreen);
+        transition: 0.3s ease-in;
+    }
+    .header--link em {font-size: 1.5em;}
+}
+main {
+    overflow: auto;
+    margin-top: 6em;
+}
+.section--one--img {
+    width: 100%;
+    height: auto;
+}
+.section--two {
+    padding: 30px 20px;
+    background-color: var(--Black);
+    height: auto;
+    color: var(--White);
+    text-align: center;
+}
+.section--two .title{
+    text-align: left;
+    font-size: 12px;
+    font-family: "Fraunces", serif;
+    color: var(--cyan);
+}
+.section--two-words {
+    font-size: 1.2em;
+    font-family: "Overpass", serif;
+    line-height: 25px;
+    padding: 10px 0;
+}
+.section--two--btn {
+    background-color: transparent;
+    margin-top: 50px;
+    color: var(--White);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 30px;
+    font-size: 1em;
+}
+.btn--text {
+    display: none;
+    transform-origin: 0 50%;
+}
+@media (min-width:768px) {    
+    main {
+        margin-top: 6.8em;
+    }
+    .section--one--img {
+        display: none;
+    }
+    .section--one {
+        background: url(../images/pngwing.com.png), var(--Cyan);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 46em;
+    }
+    .section--two {
+	    position:absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+        border-radius: 1em;
+        padding: 2em 4em;
+        min-width: 100vh;
+    }
+}
+.page--details {
+    margin-top: 20px;
+}
+.page--details--btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn{
+    padding: 0.6em 1em;
+    border-radius: 9px;
+    border: 2px solid var(--White);
+    font-size: 12px;
+    font-family: "Red_Hat_Display";
+    color: var(--White);
+}
+.btn--one {
+    background-color: var(--Cyan);
+}
+.btn--one:hover {
+    background-color: var(--White);
+    color: var(--Cyan);
+    border: 2px solid var(--Cyan);
+}
+.btn--two {
+    background-color: var(--darkCyan);
+}
+.btn--two:hover {
+    background-color: var(--White);
+    color: var(--darkCyan);
+    border: 2px solid var(--darkCyan);
+}
+.btn--three {
+    background-color: var(--veryDarkCyan);
+}
+.btn--three:hover {
+    background-color: var(--White);
+    color: var(--veryDarkCyan);
+    border: 2px solid var(--veryDarkCyan);
+}
+.PDC {
+    display: none;
+}
+.active {
+    display: block;
+}
+.move--sliders {
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.sliders {
+    opacity: 0.7;
+    font-size: 2em;
+}
+.sliders:hover {
+    opacity: 1;
+    content: "";
+    cursor: pointer;
+    outline: none;
+}
+.left--btn {
+    display: none;
+} 
+.lec--note,
+.p--question {
+    padding: 0 10%;
+}
+@media (min-width:768px) {
+    .btn {
+        padding: 0.6em 2em;
+        font-size: 1.2rem;
+    }
+    .lec--note,
+    .p--question {
+        padding: 0 30%;
+    }
+}
+.card__style {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 8px 2px var(--LightLavender);
+    min-height: 6em;
+    margin-bottom: 1.5em;
+    padding: 10px 1em;
+    font-family: "Overpass", "Big Shoulders Display", sans-serif;
+}
+.card__style__one{
+    border-top: 4px solid var(--Blue);
+}
+.card__style__two {
+    border-top: 4px solid var(--Orange);
+}
+.card__style__three {
+    border-top: 4px solid var(--Cyan);
+}
+.card__style__four {
+    border-top: 4px solid var(--Red);
+}
+.card--link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px 0;
+    
+    margin-bottom: 10px;
+}
+.card--link--one {
+    background-color: var(--cobaltBlue);
+}
+.card--link--one > p {
+    color: var(--Blue);
+}
+.card--link--two {
+    background-color: var(--orangeYellow);
+}
+.card--link--two > p {
+    color: var(--Orange);
+}
+.card--link--three {
+    background-color: var(--greenTeal);
+}
+.card--link--three > p {
+    color: var(--Cyan);
+}
+.card--link--four {
+    background-color: var(--lightRed);
+}
+.card--link--four > p {
+    color: var(--Red);
+}
+.card--text {
+    font-size: small;
+}
+/* Error Page style */
+.c--activities {
+    font-family: "Overpass", "Big Shoulders Display", sans-serif;
+    background: var(--netlifyBrokenPage); 
+    color: var(--White);
+    overflow: hidden;
+}
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.card {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5em;
+    background: var(--White);
+    color: var(--netlifyBrokenPage);
+    border-radius: 0.5em;
+    box-shadow: 1px 5px 10px rgba(14, 30, 37, .16);
+}
+a {
+    margin: 0;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: var(--veryDarkCyan);
+}
+a svg {
+    position: relative;
+    top: 2px;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--Cyan);
+}
+a:hover svg path{
+    fill: var(--darkCyan);
+}
+p:last-of-type {
+    margin-bottom: 0;
+}
+/* Error page style stop */
+
+footer {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    border: none;
+    border-top: 3px solid var(--Black);
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lexend Deca";
+}
+.icon {
+    position: relative;
+    border-radius: 60%;
+    padding: 7px;
+    padding-left: 8px;
+    background-color: var(--Black);
+}
+.icon > i {
+    font-size: 1em;
+    color: var(--veryLightGray);
+    transition: 0.6s ease;
+}
+#footer_frame {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    width: fit-content;
+    z-index: 100;
+}

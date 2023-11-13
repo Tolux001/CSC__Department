@@ -1,0 +1,96 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Fonts Declaration */
+@font-face {
+  font-family: "Overpass";
+  src: url(../asset/Overpass-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../asset/Poppins-Bold.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url(../asset/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  font-display: swap;
+}
+main {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.tier--one {
+  position: -webkit-sticky;
+  padding: 20px;
+  background-color: rgb(207, 222, 238);
+  flex: 1 0 150px;
+}
+.tier--one__btn {
+  background-color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 1em;
+  margin-bottom: 30px;
+}
+.tier--one > p {
+  padding-bottom: 15px;
+}
+.tier--one > p > i {
+  margin-right: 10px;
+}
+span[class="space"] {
+  padding: 20px 0;
+  border: 1px solid rgb(207, 222, 238);
+}
+.tier--two {
+  position: relative;
+  flex: 5 2 400px;
+}
+.card--component {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px 0 20px 30px;
+  border-top: 2px solid  rgb(207, 222, 238); 
+  margin-bottom: 15px;
+}
+.card--component__text {
+  flex: 3 0 50px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.card--component__text > p {
+  margin-left: 150px;
+}
+p[class="cct"] {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.icon {
+  padding: 10px 15px;
+}
+.icon > p {
+  font-size: 1em;
+  color: #f5f5f5;
+  font-family: "Fraunces", sans-serif;
+}
+@media (max-width: 768px) {
+  .tier--one {
+    display: none;
+  }
+  .card--component__text {
+    flex-flow: column;
+  }
+  .card--component__text > p {
+    margin-left: 0;
+  }
+  .card--component {
+    padding: 20px 0 20px 10px;
+  }
+  .card--component__text > p {
+    margin-left: 20px;
+  }
+}
