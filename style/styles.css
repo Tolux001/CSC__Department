@@ -10,10 +10,10 @@
     /* colors */
 
     /* Primary */
-    --Blue: hsl(212, 86%, 64%);
-    --Cyan: hsl(189, 79%, 60%);
-    --Orange: hsl(34, 97%, 64%);
-    --Red: hsl(0, 78%, 62%);
+    --Blue: hsl(212, 100%, 50%);
+    --Cyan: hsl(189, 100%, 50%);
+    --Orange: hsl(34, 98%, 50%);
+    --Red: hsl(0, 100%, 51%);
     --lightRed: hsla(0, 100%, 67%, 0.4);
     --orangeYellow: hsla(34, 97%, 60%, 0.4);
     --greenTeal: hsla(189, 79%, 60%, 0.4);
@@ -94,11 +94,7 @@ header.header {
     font-size: 1em;
     font-weight: 700;
     font-family: "Fraunces";
-    color: var(--grayishBlue);
-}
-.header--link img{
-    height: 50px;
-    width: 50px;
+    color: var(--netlifyBrokenPage);
 }
 .nav--bar,
 input[name="check"],
@@ -229,7 +225,7 @@ main {
         display: none;
     }
     .section--one {
-        background: url(../images/pngwing.com.png), var(--Cyan);
+        background: url(../images/pngwing.com.webp), var(--Cyan);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -263,7 +259,7 @@ main {
     color: var(--White);
 }
 .btn--one {
-    background-color: var(--Cyan);
+    background-color: var(--darkCyan);
 }
 .btn--one:hover {
     background-color: var(--White);
@@ -271,7 +267,7 @@ main {
     border: 2px solid var(--Cyan);
 }
 .btn--two {
-    background-color: var(--darkCyan);
+    background-color: var(--darkGreen);
 }
 .btn--two:hover {
     background-color: var(--White);
@@ -354,8 +350,11 @@ main {
     align-items: center;
     border-radius: 8px;
     padding: 5px 0;
-    
     margin-bottom: 10px;
+}
+.card--link img {
+    width: 20px;
+    height: 20px;
 }
 .card--link--one {
     background-color: var(--cobaltBlue);
