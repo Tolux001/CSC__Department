@@ -439,7 +439,7 @@ p:last-of-type {
 /* Error page style stop */
 
 footer {
-    backdrop-filter: blur(10px);
+    background: transparent;
     width: 100%;
     border: none;
     border-top: 3px solid var(--Black);
