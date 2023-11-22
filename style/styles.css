@@ -464,7 +464,7 @@ footer {
 #footer_frame {
     display: none;
     position: fixed;
-    bottom: 10%;
+    bottom: 20%;
     right: 0;
     width: fit-content;
     z-index: 100;
