@@ -93,4 +93,7 @@ p[class="cct"] {
   .card--component__text > p {
     margin-left: 20px;
   }
+  p[class="cct"] {
+    padding-bottom: 5px;
+  }
 }
